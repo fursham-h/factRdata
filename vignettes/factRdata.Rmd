@@ -1,0 +1,48 @@
+---
+title: "Custom assembled transcriptomes"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Sample custom transcriptomes to supplement factR}
+    %\VignetteEngine{knitr::knitr}
+    \usepackage[utf8]{inputenc}
+---
+
+# Experiment and sample description
+
+This package provides assembled transcriptomes from three RNA-seq experiments
+in the form of GTF files. The data are publicly available and details of these
+experiments are available in these citations:
+
+1. Hurt JA, Robertson AD, Burge CB (2013) Global analyses of UPF1 binding and 
+function reveal expanded scope of nonsense-mediated mRNA decay. Genome Res 23 
+(10):1636-1650. 
+[doi:10.1101/gr.157354.113](https://genome.cshlp.org/content/23/10/1636)
+2. Tasic B et al (2018) Shared and distinct transcriptomic cell types across
+neocortical areas. Nature 563 (7729):72-78. 
+[doi:10.1038/s41586-018-0654-5](https://www.nature.com/articles/s41586-018-0654-5)
+3. Sessegolo C et al (2019) Transcriptome profiling of mouse samples using 
+nanopore sequencing of cDNA and RNA molecules. Scientific Reports 9 (1):14908. 
+[doi:10.1038/s41598-019-51470-9](https://www.nature.com/articles/s41598-019-51470-9)
+
+The custom transcriptomes from these experiments can be
+found in `inst/extdata` directory
+
+# Generating custom transcriptomes
+
+These custom assembled transcriptomes can be built using three separate shell 
+scriptsfound in `inst/scripts`. In this directory, there are two supporting 
+text files (`lr_fastq.txt` and `sc_fastq_curated.txt`) which contain hyperlinks
+to download theraw RNA-seq files. To execute these scripts, you would need 
+these additional softwares installed in PATH
+
+1. [SRA toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
+2. [HISAT2](http://daehwankimlab.github.io/hisat2/download/)
+3. [Minimap2](https://github.com/lh3/minimap2)
+4. [Samtools](www.htslib.org)
+5. [StringTie2](https://ccb.jhu.edu/software/stringtie/#install)
+
+# Session info
+
+```{r}
+sessionInfo()
+```
